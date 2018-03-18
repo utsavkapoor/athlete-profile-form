@@ -12,7 +12,8 @@
 
         $stateProvider.state('/',{
             url:'/',
-            templateUrl:'./public/html/HomePage.html'
+            templateUrl:'./public/html/HomePage.html',
+            controller:'HomeController as controller'
         })
 
         $stateProvider.state('list',{

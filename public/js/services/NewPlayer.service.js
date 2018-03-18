@@ -11,28 +11,7 @@
             username:'',
             alreadyExists:false
         };
-        let player_object = {
-            username:'',
-            name:'',
-            sports:[],
-            nationality:'',
-            gender:'',
-            dob:'',
-            association:'',
-            team:'',
-            about:'',
-            interest:'',
-            charities:'',
-            pets:'',
-            alchol:'',
-            married:'',
-            facebook:'',
-            twitter:'',
-            instagram:'',
-            snapchat:'',
-            linkedin:'',
-            twitch:''
-        };
+        let player_object = {};
 
         playerdata.setBasicData = (object) => {
             player_object.username = object.username;
@@ -65,6 +44,10 @@
 
         playerdata.getPlayerObject = () => {
             return player_object;
+        }
+
+        playerdata.reset = () => {
+            player_object = {};
         }
 
         playerdata.setUserProperties = (object) => {
