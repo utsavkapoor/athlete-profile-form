@@ -33,9 +33,10 @@
             };
 
             PlayerService.setBasicData(object);
+            PlayerService.setUserProperties({username:player.username,value:false});
 
-            dataService.CreateNewPlayer().then((response) => {
-                playerdata.setUserProperties(response);
+            dataService.CreateNewPlayer(object).then((response) => {
+                PlayerService.setUserProperties(response);
             })
         }
 

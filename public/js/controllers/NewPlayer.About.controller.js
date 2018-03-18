@@ -8,6 +8,7 @@
     function NewPlayerAboutController(PlayerService,dataService) {
         let player_about = this;
         player_about.option = ["Yes","No"];
+        console.log(PlayerService.getUserProperties());
 
         let obj = PlayerService.getPlayerObject();
 

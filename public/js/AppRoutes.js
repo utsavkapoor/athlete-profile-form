@@ -19,7 +19,13 @@
         $stateProvider.state('list',{
             url:'/list',
             templateUrl:'./public/html/ListPlayers.html',
-            controller:'ListPlayerController as controller5'
+            controller:'ListPlayerController as controller5',
+            resolve: {
+                data: ['dataService', (dataService) => {
+                    console.log("trying to resolve");
+                    return dataService.GetAllPlayers();
+                }]
+            }
         })
 
         $stateProvider.state('basic', {

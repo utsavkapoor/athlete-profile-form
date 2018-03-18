@@ -11,7 +11,20 @@ const app = express();
 const routes = require('./app/routes');
 const bodyParser     = require('body-parser');
 const methodOverride = require('method-override');
+require('dotenv').config({path:'./.env'})
 const port = process.env.PORT || 8000;
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.database);
+
+const db = mongoose.connection;
+
+db.on('error',() => {
+    console.log("Error connecting to database");
+});
+db.once('open',() => {
+    console.log('Database Connected');
+})
 
 app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json

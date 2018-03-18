@@ -1,3 +1,7 @@
+'use strict';
+
+const Player = require('../config/schema.js');
+
 module.exports = (app) => {
     app.route('/')
         .get(function(req, res) {
@@ -6,12 +10,56 @@ module.exports = (app) => {
 
     app.route('/list')
     .get((req,res) => {
-        console.log("In All List");
+        Player.find({}, (err,records) => {
+            let data = {};
+
+            records.forEach((record) => {
+                data[record.username] = record;
+            })
+            res.send(data);
+        });
     })
 
     app.route('/new')
     .post((req,res) => {
         console.log(req.body);
+        let object = req.body;
+        if(object.name && object.username && object.sports && object.nationality && object.dob){
+
+            Player.check_username(object.username,(user) => {
+                if(!user){
+                    let db_entry = {
+                        name:object.name,
+                        username: object.username,
+                        sports: object.sports,
+                        nationality:object.nationality,
+                        dob:new Date(object.dob).toISOString()
+                    };
+                    if(object.gender){
+                        db_entry.gender=object.gender[0];
+                    }
+                    Player.create(db_entry, (err,record) => {
+                        if(err){
+                            console.log("Server Error:"+err);
+                            res.status(500);
+                            res.type('txt').send("Internal Server Error");
+                        }
+                        console.log("Added");
+                        res.send({
+                            username:record.username,
+                            value:false
+                        });
+                    });
+                } else{
+                    console.log("I am here");
+                    res.send({
+                        username:object.username,
+                        value:false
+                    });
+                }
+            })
+
+        }
     })
 
     app.route('/new/:username')

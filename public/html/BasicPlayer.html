@@ -72,7 +72,7 @@
                     <!-- Buttons -->
                     <div class="form-group row margin">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                            <button type="submit" class="btn btn-primary btn-lg" ui-sref="about" ng-click="controller1.submit()">Next</button>
+                            <button type="submit" class="btn btn-primary btn-lg" ui-sref="about" ng-disabled="playerForm.$invalid" ng-click="controller1.submit()">Next</button>
                             <button type="submit" class="btn btn-primary btn-lg" ui-sref="/">back</button>
                         </div>
                     </div>

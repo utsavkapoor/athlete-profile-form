@@ -48,11 +48,17 @@
 
         playerdata.reset = () => {
             player_object = {};
+            player_settings_object = {username:'',
+            alreadyExists:false};
         }
 
         playerdata.setUserProperties = (object) => {
             player_settings_object.username = object.username;
             player_settings_object.alreadyExists = object.value;
+        }
+
+        playerdata.getUserProperties = (object) => {
+            return player_settings_object;
         }
 
     }

@@ -5,8 +5,9 @@
 
     app.controller('ListPlayerController',ListPlayerController);
 
-    function ListPlayerController(){
+    function ListPlayerController(data){
         let list = this;
+        console.log(data.data);
 
         list.players =  [
             {name:"abcd",sport:"Cricket",twitter:"random1"},

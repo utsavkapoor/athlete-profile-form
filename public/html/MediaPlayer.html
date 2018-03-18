@@ -11,7 +11,8 @@
                     <div class="form-group row">
                         <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-facebook fa-2x"></i></label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="facebook" placeholder="facebook" class="form-control" ng-model="controller3.facebook" />
+                            <input type="text" name="facebook" placeholder="facebook" class="form-control" ng-model="controller3.facebook" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" />
+                            <small ng-show="playerMediaForm.facebook.$invalid && !playerMediaForm.facebook.$pristine" class="help-block">url are of the form facebook.com/your_user_name</small>
                         </div>
                     </div>
 
@@ -21,7 +22,8 @@
 
 </label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Twitter" placeholder="twitter handle" class="form-control" ng-model="controller3.twitter" />
+                            <input type="text" name="Twitter" placeholder="twitter handle" class="form-control" ng-model="controller3.twitter" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" />
+                            <small ng-show="playerMediaForm.twitter.$invalid && !playerMediaForm.twitter.$pristine" class="help-block">url are of the form twitter.com/your_user_name</small>
                     </div>
                 </div>
 
@@ -31,7 +33,8 @@
 
 </label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Instagram" placeholder="Instagram handle" class="form-control" ng-model="controller3.instagram" />
+                            <input type="text" name="Instagram" placeholder="Instagram handle" class="form-control" ng-model="controller3.instagram" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" />
+                            <small ng-show="playerMediaForm.Instagram.$invalid && !playerMediaForm.Instagram.$pristine" class="help-block">url are of the form instagram.com/your_user_name</small>
                         </div>
                     </div>
 
@@ -42,7 +45,7 @@
 
 </label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Snapchat" placeholder="Snapchat handle" class="form-control" ng-model="controller3.snapchat"/>
+                            <input type="text" name="Snapchat" placeholder="Snapchat handle" class="form-control" ng-model="controller3.snapchat" />
                         </div>
                     </div>
 
@@ -53,7 +56,8 @@
 
 </label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Linkedin" placeholder="Linkedin" class="form-control" ng-model="controller3.linkedin"/>
+                            <input type="text" name="Linkedin" placeholder="Linkedin" class="form-control" ng-model="controller3.linkedin" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" />
+                            <small ng-show="playerMediaForm.Linkedin.$invalid && !playerMediaForm.Linkedin.$pristine" class="help-block">url are of the form linkedin.com/in/your_user_name</small>
                         </div>
                     </div>
 
@@ -64,7 +68,8 @@
 
 </label>
                         <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Twitch" placeholder="twitch url" class="form-control" ng-model="controller3.twitch"/>
+                            <input type="text" name="Twitch" placeholder="twitch url" class="form-control" ng-model="controller3.twitch" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" />
+                            <small ng-show="playerMediaForm.Twitch.$invalid && !playerMediaForm.Twitch.$pristine" class="help-block">url are of the form twitch.tv/your_user_name</small>
                         </div>
                     </div>
 

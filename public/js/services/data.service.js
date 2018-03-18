@@ -16,6 +16,7 @@
                 url:'/new',
                 data: object
             };
+            console.log(req);
 
             return $http(req).then((response) => {
                 return response;
