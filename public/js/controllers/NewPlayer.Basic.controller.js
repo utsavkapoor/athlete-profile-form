@@ -34,9 +34,9 @@
 
             PlayerService.setBasicData(object);
 
-            // dataService.CreateNewPlayer().then((response) => {
-            //     playerdata.setUserProperties(response);
-            // })
+            dataService.CreateNewPlayer().then((response) => {
+                playerdata.setUserProperties(response);
+            })
         }
 
 

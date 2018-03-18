@@ -25,7 +25,7 @@
         }
 
         data.UpdatePlayerData = (username,object) => {
-            return $http.put('/new/'+username).then((response) => {
+            return $http.put('/new/'+username,object).then((response) => {
                 return response;
             }).catch((err) => {
                 return err;

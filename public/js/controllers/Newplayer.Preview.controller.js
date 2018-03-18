@@ -14,7 +14,7 @@
         preview.dob = (date.getMonth()+1).toString() + "/" + date.getDate().toString() + "/" + date.getFullYear().toString();
 
         preview.submit = () => {
-            //dataService.UpdatePlayerData(preview.obj.username);
+            dataService.UpdatePlayerData(preview.obj.username,preview.obj);
         }
 
     }
