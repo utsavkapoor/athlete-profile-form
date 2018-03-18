@@ -39,7 +39,7 @@
             });
 
             dataService.CreateNewPlayer(object).then((response) => {
-                PlayerService.setUserProperties(response);
+                console.log("Added");
             })
         }
     }

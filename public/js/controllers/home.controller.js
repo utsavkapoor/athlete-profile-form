@@ -9,6 +9,5 @@
 
     function HomeController(PlayerService) {
         PlayerService.reset();
-        console.log(PlayerService.getPlayerObject());
     }
 })()

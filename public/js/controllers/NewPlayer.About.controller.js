@@ -9,7 +9,6 @@
         let player_about = this;
         player_about.option = ["Yes", "No"];
         let check = PlayerService.getUserProperties();
-        console.log(PlayerService.getUserProperties());
         if(check.username.length === 0){
             player_about.hide = true;
         } else {

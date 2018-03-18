@@ -9,7 +9,6 @@
         let media = this;
         let obj = PlayerService.getPlayerObject();
         let check = PlayerService.getUserProperties();
-        console.log(PlayerService.getUserProperties());
         if(check.username.length === 0){
             media.hide = true;
         } else {

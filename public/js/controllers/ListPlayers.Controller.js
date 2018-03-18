@@ -7,7 +7,6 @@
 
     function ListPlayerController(data) {
         let list = this;
-        console.log(data.data);
         let obj = data.data;
         list.players = [];
         Object.keys(obj).forEach((key) => {
