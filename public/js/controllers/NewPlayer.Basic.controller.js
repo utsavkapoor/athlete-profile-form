@@ -5,14 +5,14 @@
 
     app.controller('NewPlayerBasicController', NewPlayerBasicController);
 
-    NewPlayerBasicController.$inject = ['PlayerService','dataService'];
+    NewPlayerBasicController.$inject = ['PlayerService', 'dataService'];
 
-    function NewPlayerBasicController(PlayerService,dataService){
+    function NewPlayerBasicController(PlayerService, dataService) {
         let player = this;
 
-        player.options = ["Golf","Tennis","Cricket","Basketball","Baseball","American Football","Aquatics","Archery","Automobile Racing","Badminton","Beach Volleyball","Bobsleigh","Body Building","Boxing","Cross Country Running","Cross Country Skiing","Curling","Cycling","Darts","Decathlon","Down Hill Skiing","Equestrianism","eSports","Fencing","Field Hockey","Figure Skating","Gymnastics","Ice Hockey","Martial Arts","Mixed Martial Arts","Modern Pentathlon","Motorcycle Racing","Netball","Polo","Racquetball","Rowing","Rugby","Sailing","Softball","Shooting","Skateboarding","Skeet Shooting","Skeleton","Snow Boarding","Soccer (Football)","Squash","Surfing","Swimming","Track and Field"];
+        player.options = ["Golf", "Tennis", "Cricket", "Basketball", "Baseball", "American Football", "Aquatics", "Archery", "Automobile Racing", "Badminton", "Beach Volleyball", "Bobsleigh", "Body Building", "Boxing", "Cross Country Running", "Cross Country Skiing", "Curling", "Cycling", "Darts", "Decathlon", "Down Hill Skiing", "Equestrianism", "eSports", "Fencing", "Field Hockey", "Figure Skating", "Gymnastics", "Ice Hockey", "Martial Arts", "Mixed Martial Arts", "Modern Pentathlon", "Motorcycle Racing", "Netball", "Polo", "Racquetball", "Rowing", "Rugby", "Sailing", "Softball", "Shooting", "Skateboarding", "Skeet Shooting", "Skeleton", "Snow Boarding", "Soccer (Football)", "Squash", "Surfing", "Swimming", "Track and Field"];
 
-        player.gender_option = ["Male","Female"];
+        player.gender_option = ["Male", "Female"];
 
         let obj = PlayerService.getPlayerObject();
         player.name = obj.name;
@@ -24,22 +24,23 @@
 
         player.submit = () => {
             let object = {
-                name : player.name,
+                name: player.name,
                 username: player.username,
-                sports:player.sports,
-                nationality:player.nationality,
-                gender:player.gender,
-                dob:player.dob
+                sports: player.sports,
+                nationality: player.nationality,
+                gender: player.gender,
+                dob: player.dob
             };
 
             PlayerService.setBasicData(object);
-            PlayerService.setUserProperties({username:player.username,value:false});
+            PlayerService.setUserProperties({
+                username: player.username,
+                value: false
+            });
 
             dataService.CreateNewPlayer(object).then((response) => {
                 PlayerService.setUserProperties(response);
             })
         }
-
-
     }
 })();

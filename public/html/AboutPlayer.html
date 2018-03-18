@@ -2,91 +2,99 @@
     <div class="row">
         <img class="img-responsive" src="./public/images/background1.jpg" alt="Emotional Intelligence Self-Assessment">
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <div class="jumbotron">
-                <form name="playeraboutForm" novalidate>
-                    <!-- Association -->
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Association</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Association" class="form-control" ng-model="controller2.association" />
+    <div ng-if="controller2.hide">
+        <h3>Please go back to enter your Username.</h3>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg" ui-sref="/">Back</button>
+        </div>
+    </div>
+    <div ng-if="!controller2.hide">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <div class="jumbotron">
+                    <form name="playeraboutForm" novalidate>
+                        <!-- Association -->
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Association</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <input type="text" name="Association" class="form-control" ng-model="controller2.association" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Team -->
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Team</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="Team" class="form-control" ng-model="controller2.team" />
-                    </div>
-                </div>
-
-                    <!-- About -->
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">About</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <textarea type="text" name="about" class="form-control" ng-model="controller2.about"></textarea>
+                        <!-- Team -->
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Team</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <input type="text" name="Team" class="form-control" ng-model="controller2.team" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Interest-->
-
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Interest</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="interest" class="form-control" ng-model="controller2.interest"/>
+                        <!-- About -->
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">About</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <textarea type="text" name="about" class="form-control" ng-model="controller2.about"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Charities -->
+                        <!-- Interest-->
 
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Charities</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="charities" class="form-control" ng-model="controller2.charities"/>
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Interest</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <input type="text" name="interest" class="form-control" ng-model="controller2.interest" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Pets -->
+                        <!-- Charities -->
 
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Pets</label>
-                        <div class="col-xs-10 col-sm-10 col-md-10">
-                            <input type="text" name="pets" class="form-control" ng-model="controller2.pets"/>
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Charities</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <input type="text" name="charities" class="form-control" ng-model="controller2.charities" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Drinks -->
+                        <!-- Pets -->
 
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Drinks</label>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                            <multiselect ng-model="controller2.alchol" options="controller2.option" classes-btn="'btn-block'" selection-limit="1">
-                            </multiselect>
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Pets</label>
+                            <div class="col-xs-10 col-sm-10 col-md-10">
+                                <input type="text" name="pets" class="form-control" ng-model="controller2.pets" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Married -->
+                        <!-- Drinks -->
 
-                    <div class="form-group row">
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Married</label>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                            <multiselect ng-model="controller2.married" options="controller2.option" classes-btn="'btn-block'" selection-limit="1">
-                            </multiselect>
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Drinks</label>
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <multiselect ng-model="controller2.alchol" options="controller2.option" classes-btn="'btn-block'" selection-limit="1">
+                                </multiselect>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Buttons -->
+                        <!-- Married -->
 
-                    <div class="form-group row margin">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                        <button type="submit" class="btn btn-primary btn-lg" ui-sref="media" ng-disabled="playeraboutForm.$invalid" ng-click="controller2.submit();">Next</button>
-                        <button type="submit" class="btn btn-primary btn-lg" ui-sref="basic">back</button>
+                        <div class="form-group row">
+                            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Married</label>
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <multiselect ng-model="controller2.married" options="controller2.option" classes-btn="'btn-block'" selection-limit="1">
+                                </multiselect>
+                            </div>
                         </div>
-                    </div>
-                </form>
+
+                        <!-- Buttons -->
+
+                        <div class="form-group row margin">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg" ui-sref="media" ng-disabled="playeraboutForm.$invalid" ng-click="controller2.submit();">Next</button>
+                                <button type="submit" class="btn btn-primary btn-lg" ui-sref="basic">back</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 </div>

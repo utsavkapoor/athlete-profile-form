@@ -3,7 +3,7 @@
 
     const app = angular.module('AthleteProfile');
 
-    app.controller('HomeController',HomeController);
+    app.controller('HomeController', HomeController);
 
     HomeController.$inject = ['PlayerService'];
 

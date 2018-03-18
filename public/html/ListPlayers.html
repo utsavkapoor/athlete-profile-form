@@ -9,11 +9,17 @@
                 <ul>
                     <li class="lines" ng-repeat="player in controller5.players">
                         <div class="row text-center">
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h2>{{player.name}}</h2>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a ui-sref="listOne({username:player.username})"><h2>{{player.name}}</a></h2>
                             </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h4>{{player.sport}}</h4></div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h4>{{player.twitter}}</h4></div>
-
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <ol>
+                                    <li class="li-no-hover" ng-repeat="sport in player.sport">
+                                        <h4>{{sport}}</h4>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <h4>{{player.twitter}}</h4></div>
                         </div>
                     </li>
                 </ul>

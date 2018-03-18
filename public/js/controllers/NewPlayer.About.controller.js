@@ -1,14 +1,20 @@
 (() => {
     const app = angular.module('AthleteProfile');
 
-    app.controller('NewPlayerAboutController',NewPlayerAboutController);
+    app.controller('NewPlayerAboutController', NewPlayerAboutController);
 
-    NewPlayerAboutController.$inject = ['PlayerService','dataService'];
+    NewPlayerAboutController.$inject = ['PlayerService', 'dataService'];
 
-    function NewPlayerAboutController(PlayerService,dataService) {
+    function NewPlayerAboutController(PlayerService, dataService) {
         let player_about = this;
-        player_about.option = ["Yes","No"];
+        player_about.option = ["Yes", "No"];
+        let check = PlayerService.getUserProperties();
         console.log(PlayerService.getUserProperties());
+        if(check.username.length === 0){
+            player_about.hide = true;
+        } else {
+            player_about.hide = false;
+        }
 
         let obj = PlayerService.getPlayerObject();
 
@@ -24,13 +30,13 @@
         player_about.submit = () => {
             let object = {
                 association: player_about.association,
-                team:player_about.team,
-                about:player_about.about,
-                interest:player_about.interest,
-                charities:player_about.charities,
-                pets:player_about.pets,
-                alchol:player_about.alchol,
-                married:player_about.married
+                team: player_about.team,
+                about: player_about.about,
+                interest: player_about.interest,
+                charities: player_about.charities,
+                pets: player_about.pets,
+                alchol: player_about.alchol,
+                married: player_about.married
             };
 
             PlayerService.setAboutData(object);
