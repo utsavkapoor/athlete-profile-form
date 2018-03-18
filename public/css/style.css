@@ -3,33 +3,79 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	color: #222;
-	background-color: #ECF0F1;
-	text-align: center;
+	/*background-color: #ECF0F1;*/
 }
 
-.container {
-	padding: 0;
-	margin-top: 40px;
+.container-fluid {
+	margin-top:40px;
 }
 
-.footer {
-	margin-top: 60px;
+.row, .margin{
+	margin:20px;
 }
-
-ol {
-	list-style-position: inside;
-}
-ul {
-	list-style-type: none;
-}
-
-a {
-	color: #2574A9;
-}
-/****** Logo Div Styling ******/
 
 img {
-	margin: 20px auto 0 auto;
-	display: block;
+	width:100%;
+	max-height:50%;
+}
+
+.lines {
+    border: 2px solid white;
+    margin-top: 5px;
+    list-style: none;
+    padding: 10px;
+    line-height: 50px;
+    }
+
+li:hover {
+  border-left: 10px solid yellow;
+  margin-left: -10px;
+  text-decoration: none;
+}
+
+/* Font  Awesome CSS */
+.fa-facebook, .fa-facebook-square {
+    color: #3b5998
+}
+.fa-twitter, .fa-twitter-square {
+    color: #00aced
+}
+.fa-google-plus, .fa-google-plus-square {
+    color: #dd4b39
+}
+.fa-youtube, .fa-youtube-play, .fa-youtube-square {
+    color: #bb0000
+}
+.fa-tumblr, .fa-tumblr-square {
+    color: #32506d
+}
+.fa-vine {
+    color: #00bf8f
+}
+.fa-flickr {
+    color: #ff0084
+}
+.fa-vimeo-square {
+    color: #aad450
+}
+.fa-pinterest, .fa-pinterest-square {
+    color: #cb2027
+}
+.fa-linkedin, .fa-linkedin-square {
+    color: #007bb6
+}
+.fa-spotify {
+    color: #1ED760;
+}
+
+.fa-instagram {
+	color: #3f729b;
+}
+
+.fa-twitch {
+	color: #6441a4;
+}
+
+.fa-snapchat-ghost {
+	color:yellow;
 }

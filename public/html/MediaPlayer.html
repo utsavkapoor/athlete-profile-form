@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row">
+        <img class="img-responsive" src="./public/images/background1.jpg" alt="Emotional Intelligence Self-Assessment">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <div class="jumbotron">
+                <h3 class="text-left">Social Media Handles:</h3>
+                <form name="playerMediaForm" novalidate>
+                    <!-- facebook -->
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-facebook fa-2x"></i></label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="facebook" placeholder="facebook" class="form-control" ng-model="controller3.facebook" />
+                        </div>
+                    </div>
+
+                    <!-- Twitter -->
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-twitter fa-2x"></i>
+
+</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="Twitter" placeholder="twitter handle" class="form-control" ng-model="controller3.twitter" />
+                    </div>
+                </div>
+
+                    <!-- Instagram -->
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-instagram fa-2x"></i>
+
+</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="Instagram" placeholder="Instagram handle" class="form-control" ng-model="controller3.instagram" />
+                        </div>
+                    </div>
+
+                    <!-- Snapchat -->
+
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-snapchat-ghost fa-2x"></i>
+
+</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="Snapchat" placeholder="Snapchat handle" class="form-control" ng-model="controller3.snapchat"/>
+                        </div>
+                    </div>
+
+                    <!-- Linkedin -->
+
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-linkedin fa-2x"></i>
+
+</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="Linkedin" placeholder="Linkedin" class="form-control" ng-model="controller3.linkedin"/>
+                        </div>
+                    </div>
+
+                    <!-- Twitch -->
+
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-twitch fa-2x"></i>
+
+</label>
+                        <div class="col-xs-10 col-sm-10 col-md-10">
+                            <input type="text" name="Twitch" placeholder="twitch url" class="form-control" ng-model="controller3.twitch"/>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <div class="form-group row margin">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                        <button type="submit" ng-click="controller3.submit();" class="btn btn-primary btn-lg" ui-sref="preview" ng-disabled="playerMediaForm.$invalid">Preview</button>
+                        <button type="submit" class="btn btn-primary btn-lg" ui-sref="about">back</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+</div>

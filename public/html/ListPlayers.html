@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <img class="img-responsive" src="./public/images/background1.jpg" alt="Emotional Intelligence Self-Assessment">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="jumbotron text-center">
+                <button type="submit" class="btn btn-primary btn-lg" ui-sref="/">Back</button>
+                <ul>
+                    <li class="lines" ng-repeat="player in controller5.players">
+                        <div class="row text-center">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h2>{{player.name}}</h2>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h4>{{player.sport}}</h4></div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h4>{{player.twitter}}</h4></div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
